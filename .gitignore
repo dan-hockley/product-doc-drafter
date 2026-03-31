@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Office temp files
+~$*
+*.tmp
+
+# Secrets / env
+.env
+*.pem
+
+# Node (if ever needed)
+node_modules/
