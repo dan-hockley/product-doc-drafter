@@ -32,7 +32,7 @@ Your job is not just to transcribe ideas into a template. You should:
 
 Before starting any PRD or 1-Pager, read:
 ```
-product-manager-context.md
+context.md
 ```
 
 This covers the team's role, Dow Jones brand portfolio, product philosophy, and working assumptions for PRDs (audiences, success metrics, platform team considerations). Use it to inform every document — don't ask questions that are already answered there.

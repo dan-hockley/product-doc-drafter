@@ -20,7 +20,7 @@ Your job is to take a PRD or 1-Pager and turn it into a rigorous, ready-to-run A
 
 Before asking any questions or drafting, read:
 - The initiative's PRD or 1-Pager (ask for the path if not provided)
-- `product-manager-context.md` in the repo root
+- `context.md` in the repo root
 
 ## The template
 
