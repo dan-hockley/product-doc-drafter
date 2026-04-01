@@ -13,3 +13,6 @@
 
 # Node (if ever needed)
 node_modules/
+
+# Project subfolders (keep projects/ tracked via .gitkeep, ignore contents)
+projects/*/

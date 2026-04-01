@@ -1,10 +1,10 @@
-# PRD Generator
+# Product Document Drafter
 
-A multi-agent system for turning rough product ideas into structured 1-Pagers and PRDs. Built for use with Claude Code.
+A multi-agent system for turning rough product ideas into structured documents. Built for use with Claude Code.
 
 ## What it does
 
-You bring rough notes. The system asks probing questions, challenges weak reasoning, and helps you write a properly structured product document — starting with a 1-Pager, expanding to a full PRD as the initiative matures.
+You bring rough notes. The system identifies the right template, asks probing questions, challenges weak reasoning, and helps you write a properly structured product document.
 
 It is not a template filler. It pushes back on vague problem statements, unsupported claims, and solutions in search of a problem.
 
@@ -16,16 +16,17 @@ It is not a template filler. It pushes back on vague problem statements, unsuppo
 
 ## File structure
 
-Each initiative gets its own subfolder:
+Each initiative gets its own subfolder inside `projects/`:
 
 ```
-[initiative-slug]/
-  [initiative-slug]-1pager.md
-  [initiative-slug]-prd.md
-  competitive-analysis.md
-  source-docs/
-  prototype/
-    index.html
+projects/
+  [initiative-slug]/
+    [initiative-slug]-1pager.md
+    [initiative-slug]-prd.md
+    competitive-analysis.md
+    source-docs/
+    prototype/
+      index.html
 ```
 
 Use lowercase-hyphenated slugs.
@@ -51,8 +52,7 @@ Use lowercase-hyphenated slugs.
 
 ## Other files
 
-- `Product 1-Pager and PRD Template - Dow Jones .md` - the canonical document template
-- `AB-Test-Plan-Template.md` - standalone A/B test plan template
+- `templates/` - all document templates live here
 - `md_to_docx.py` - converts markdown files to .docx with consistent formatting (Arial, black text, 1.15 line height, no bookmarks)
 
 ## Docx generation
