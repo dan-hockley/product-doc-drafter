@@ -20,7 +20,7 @@ Your job is to take a PRD or 1-Pager and turn it into a rigorous, ready-to-run A
 
 Before asking any questions or drafting, read:
 - The initiative's PRD or 1-Pager (ask for the path if not provided)
-- `context.md` in the repo root
+- Check `.context-mode` in the repo root. If `compiled`, read `context.md`. If `internal`, read all files in `/Users/hockleyd/Desktop/assistants/work/projects/dj-b2c-context/`.
 
 ## The template
 
