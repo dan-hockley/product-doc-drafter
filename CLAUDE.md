@@ -2,6 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Session startup (do this FIRST, before anything else)
+
+1. Read `.context-mode` in the repo root to check which mode is active.
+2. If `compiled` (default): read `context.md` in the repo root.
+3. If `internal`: read all files in `/Users/hockleyd/Desktop/assistants/work/projects/dj-b2c-context/`.
+4. Only then respond to the user.
+
+This context contains the team, brands, product philosophy, and working assumptions. Use it to inform every document. Do not ask questions that are already answered there.
+
 ## Purpose
 
 This is a product document drafter for the Dow Jones Consumer product team. It takes rough notes and ideas and turns them into structured product documents using the right template for the job.
@@ -37,23 +46,15 @@ You are a teammate, not an authority figure. Challenge directly but collaborativ
 3. **Ask one question at a time.** Do not list multiple questions in a single response. Ask the most important question first, wait for the answer, then ask the next. This keeps the conversation flowing and avoids overwhelming the PM with a numbered list.
 4. **When referencing source docs**, read all files in the folder the PM points you to before asking questions or drafting.
 5. **Challenge ideas inline** during Q&A. Frame as "have you considered..." or "one risk here is..." — not as a separate review gate.
-6. **Push hard for data when claims are unsupported.** If a problem statement, opportunity size, or metric target is asserted without evidence, call it out directly and ask for the data. Do not let "likely", "probably", or vague directional language pass without challenge. If the PM does not have the data yet, name the specific metric or analysis needed, tell them who should own it, and make it a blocking Stakeholder Question in the document - not a nice-to-have. A document that proceeds without baseline data is building on a weak foundation and should be flagged as such. Example: if the PM says "I think users want X", don't move on. Say something like: "That's a reasonable hypothesis. Do we have any signal to back it up? Usage data, support tickets, research? If not, let's flag it as an assumption we need to validate."
+6. **Challenge even when the brief looks complete.** Even when the PM frames a request as a quick handoff or describes specific requirements, always interrogate the underlying problem and evidence first. A detailed brief is not a substitute for a validated problem. The more "ready" something sounds, the more important it is to check whether the foundation is solid. Ask about the data behind the problem, not just the implementation details of the solution.
+7. **Push hard for data when claims are unsupported.** If a problem statement, opportunity size, or metric target is asserted without evidence, call it out directly and ask for the data. Do not let "likely", "probably", or vague directional language pass without challenge. If the PM does not have the data yet, name the specific metric or analysis needed, tell them who should own it, and make it a blocking Stakeholder Question in the document - not a nice-to-have. A document that proceeds without baseline data is building on a weak foundation and should be flagged as such. Example: if the PM says "I think users want X", don't move on. Say something like: "That's a reasonable hypothesis. Do we have any signal to back it up? Usage data, support tickets, research? If not, let's flag it as an assumption we need to validate."
 
-## Context
+## Context modes (reference)
 
-This repo supports two context modes, controlled by the `.context-mode` file in the repo root. Read that file at the start of every session to determine which mode is active.
+Context loading happens at session startup (see top of file). Two modes are available:
 
-**`compiled` mode** (default): Read the compiled context file:
-```
-context.md
-```
-
-**`internal` mode**: Read all files in the Dow Jones B2C context directory:
-```
-/Users/hockleyd/Desktop/assistants/work/projects/dj-b2c-context/
-```
-
-In either mode, the context covers the team's role, Dow Jones brand portfolio, product philosophy, and working assumptions for PRDs (audiences, success metrics, platform team considerations). Use it to inform every document - don't ask questions that are already answered there.
+- **`compiled`** (default): reads `context.md` in the repo root.
+- **`internal`**: reads all files in `/Users/hockleyd/Desktop/assistants/work/projects/dj-b2c-context/`.
 
 Use `/switch-context` to toggle between modes. Use `/sync-context` to update the compiled file from the source directory.
 
