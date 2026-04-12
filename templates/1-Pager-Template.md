@@ -27,7 +27,7 @@ Example: "We are unable to paywall videos consistently across platforms, missing
 
 ### Goal(s) / Solution opportunity
 
-[What does the solution need to achieve at a high level? If we solve this problem what will we get? What value will this work bring to the company, if it is successful? Conversely, what will DJ *miss out on* by not doing it? How will this give DJ competitive advantage?
+[What does the solution need to achieve at a high level? If we solve this problem what will we get? What value will this work bring to the company, if it is successful? Conversely, what will the company *miss out on* by not doing it? How will this give the company competitive advantage?
 
 Example: "If we paywall video content within the player we will increase paywall impressions on video content and drive subscription revenue we would otherwise miss out on."]
 

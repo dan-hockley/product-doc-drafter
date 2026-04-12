@@ -1,8 +1,10 @@
-Copy the compiled context from the dj-b2c-context project into this repo's context.md file.
+Copy your compiled context file into this repo's context.md.
 
-Run this bash command:
+If you have a separate context repo with a compile script, run the compile first, then copy the output here. Example:
+
 ```
-cp /Users/hockleyd/Desktop/assistants/work/projects/dj-b2c-context/context-compiled.md /Users/hockleyd/Desktop/assistants/work/projects/product-doc-drafter/context.md
+python3 /path/to/your-context-repo/scripts/compile-context.py
+cp /path/to/your-context-repo/context-compiled.md ./context.md
 ```
 
 Then report the file size of the updated context.md using `wc -c`.

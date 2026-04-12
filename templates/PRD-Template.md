@@ -31,13 +31,13 @@ Example: "We are unable to paywall videos consistently across platforms, missing
 
 ### Vision
 
-[Make a statement about the impact you expect to make when this work is complete. How does this vision align with the Dow Jones Mission and Vision?
+[Make a statement about the impact you expect to make when this work is complete. How does this vision align with the company's mission and vision?
 
 Example: "Turn our video content into a high volume subscription driver."]
 
 ### Goal(s) / Solution opportunity
 
-[What does the solution need to achieve at a high level? If we solve this problem, what will we get? What value will this work bring to the company, if it is successful? Conversely, what will DJ *miss out on* by not doing it? How will this give DJ competitive advantage?
+[What does the solution need to achieve at a high level? If we solve this problem, what will we get? What value will this work bring to the company, if it is successful? Conversely, what will the company *miss out on* by not doing it? How will this give the company competitive advantage?
 
 Example: "If we paywall video content within the player we will increase paywall impressions on video content and drive subscription revenue we would otherwise miss out on."]
 
@@ -80,7 +80,7 @@ Example: "Video views may drop overall, reducing advertising revenue."]
 | Requirement Title | Description | User Story (optional) | Scope | Notes |
 | :---- | :---- | :---- | :---- | :---- |
 | Example: Sale pricing | The ability to change pricing that is displayed during sale periods or update pricing to match the current offer. | As a user, I want to see sale pricing within the video player so that I can quickly weigh up my purchasing decision and proceed to purchase. | MVP / Must have / Nice to have | Marketing operations should be able to run sales without the need for engineering involvement. |
-| Example 2: Flexible branding across DJs consumer brands. | ... | ... | ... | ... |
+| Example 2: Flexible branding across the company's consumer brands. | ... | ... | ... | ... |
 
 ### Dependencies
 
@@ -120,7 +120,7 @@ Legal considerations/requirements
 InfoSec considerations/requirements
 Design + UX Considerations
 Accessibility needs
-B2C considerations - [Product Development Checklist](https://docs.google.com/document/d/1TAXM7idFoAb9f7DgIcWnFzm9GB6LTXXqHu5_wO-po6s/edit?tab=t.0)
+B2C considerations - [Link to your product development checklist]
 B2B considerations
 Marketing considerations
 Prioritization (where does this fit in your roadmap)

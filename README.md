@@ -11,7 +11,7 @@ It is not a template filler. It pushes back on vague problem statements, unsuppo
 ## Setup
 
 1. Clone this repo and open it in Claude Code
-2. Create a `context.md` file in the repo root describing your role, team, product portfolio, and working assumptions. The system reads this before every session.
+2. Open `context.md` in the repo root and follow the guide to add your company and team context. The system reads this before every session.
 3. Start a session and describe your initiative. The system will take it from there.
 
 ## File structure
@@ -33,7 +33,7 @@ Use lowercase-hyphenated slugs.
 
 ## Agent team
 
-12 specialist agents live in `.claude/agents/`. Invoke them by name when you need them.
+14 specialist agents live in `.claude/agents/`. Invoke them by name when you need them.
 
 | Agent | Role | Output |
 | --- | --- | --- |
@@ -43,6 +43,8 @@ Use lowercase-hyphenated slugs.
 | `competitive-analyst` | Competitor landscape reports and feature benchmarks | Deliverable |
 | `data-analyst` | Measurement frameworks, metric definitions, instrumentation requirements | Deliverable |
 | `technical-pm` | Dependency maps, engineering questions, complexity assessments | Deliverable |
+| `engineer-architect` | System architecture, stack choices, data models, infrastructure patterns | Deliverable |
+| `product-designer` | Design feasibility, component coverage, design briefs, design direction | Both |
 | `subscriptions-strategist` | Reviews for funnel logic, LTV, pricing, and subscription impact | Critique notes |
 | `ux-advocate` | Reviews for usability, friction, accessibility risks | Critique notes |
 | `legal-privacy-reviewer` | Reviews for GDPR, CCPA, data handling, compliance risks | Critique notes |

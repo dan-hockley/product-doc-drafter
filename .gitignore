@@ -10,6 +10,7 @@
 # Secrets / env
 .env
 *.pem
+.claude/settings.local.json
 
 # Node (if ever needed)
 node_modules/
