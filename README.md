@@ -1,6 +1,8 @@
 # Product Document Drafter
 
-A multi-agent product management tool that turns rough ideas into strategically sound, solution focussed structured documents. Built for use with [Claude Code](https://claude.ai/code).
+A multi-agent product management tool that turns rough ideas into strategically sound, solution focussed structured documents. Start chatting with Claude and it will help you break down a problem, explore solutions and eventually build out sharable documentation. 
+
+Built for use with [Claude Code](https://claude.ai/code).
 
 ## Why this exists
 
