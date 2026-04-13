@@ -6,7 +6,7 @@ Without context, the drafter works as a generic PM tool. With context, it become
 
 ## The fastest way to build your context
 
-You do not need to write this from scratch. Use Claude to build it for you!!
+You do not need to write this from scratch. Use Claude to build it for you:
 
 1. Gather existing docs: strategy decks, org charts, product briefs, OKR docs, architecture diagrams, glossaries, onboarding materials
 2. Drop them into this repo (or paste them into the conversation)
@@ -26,9 +26,9 @@ Claude will extract the substance, strip the jargon, and file everything into th
 
 You have two options:
 
-### Option 1: Write directly in this file
+### Option 1: Write directly in context.md
 
-Replace this guide with your own context. Write in plain markdown. Cover the topics listed in the skeleton below, in whatever depth you have. You can always add more later.
+Copy this template to `context.md` (if it doesn't already exist) and replace this guide with your own context. Write in plain markdown. Cover the topics listed in the skeleton below, in whatever depth you have. You can always add more later.
 
 ### Option 2: Create a separate context repo (recommended for teams)
 
@@ -39,7 +39,7 @@ If multiple people or tools share the same context, maintain it in a separate re
 1. Create a repo with organized markdown files (see the folder structure below)
 2. Write a Python script that crawls all `.md` files and concatenates them into a single file
 3. Use the `## FILE:{relative_path}` convention as a header for each file section
-4. Copy the compiled output into this file using the `/sync-context` command
+4. Copy the compiled output into `context.md` using the `/sync-context` command
 
 **Recommended folder structure:**
 
@@ -109,9 +109,9 @@ What are the key competitive dynamics?]
 
 The drafter supports two context modes, controlled by the `.context-mode` file in the repo root:
 
-- **`compiled`** (default): reads this file
+- **`compiled`** (default): reads `context.md`
 - **`internal`**: reads all files directly from your context source directory
 
-Use `/switch-context` to toggle between modes. Use `/sync-context` to update this file from your context source.
+Use `/switch-context` to toggle between modes. Use `/sync-context` to update `context.md` from your context source.
 
 When using `internal` mode, update the path in `.claude/commands/switch-context.md` to point to your context source directory.

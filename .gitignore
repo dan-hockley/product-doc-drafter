@@ -15,5 +15,8 @@
 # Node (if ever needed)
 node_modules/
 
+# User context (template is tracked, local copy is not)
+context.md
+
 # Project subfolders (keep projects/ tracked via .gitkeep, ignore contents)
 projects/*/

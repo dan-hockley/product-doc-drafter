@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Session startup (do this FIRST, before anything else)
 
 1. Read `.context-mode` in the repo root to check which mode is active.
-2. If `compiled` (default): read `context.md` in the repo root.
-3. If `internal`: read all files in your context source directory (see the guide in `context.md` for setup).
+2. If `compiled` (default): read `context.md` in the repo root. If `context.md` does not exist, tell the user to copy the template (`cp context.template.md context.md`) and add their company context before starting.
+3. If `internal`: read all files in your context source directory (see the guide in `context.template.md` for setup).
 4. Only then respond to the user.
 
 This context contains the team, brands, product philosophy, and working assumptions. Use it to inform every document. Do not ask questions that are already answered there.

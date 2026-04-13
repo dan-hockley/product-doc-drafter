@@ -29,8 +29,9 @@ Most AI writing tools will happily draft a PRD from a vague brief. This one won'
 ## Setup
 
 1. Clone this repo and open it in Claude Code
-2. Open `context.md` and follow the guide to add your company context. You can use Claude to build it from existing docs.
-3. Start a session and describe your initiative
+2. Copy the context template: `cp context.template.md context.md`
+3. Open `context.md` and follow the guide to add your company context. You can use Claude to build it from existing docs.
+4. Start a session and describe your initiative
 
 ## Version
 
