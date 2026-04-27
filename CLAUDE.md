@@ -5,11 +5,95 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Session startup (do this FIRST, before anything else)
 
 1. Read `.context-mode` in the repo root to check which mode is active.
-2. If `compiled` (default): read `context.md` in the repo root. If `context.md` does not exist, tell the user to copy the template (`cp context.template.md context.md`) and add their company context before starting.
+2. If `compiled` (default): check whether `context.md` exists in the repo root.
+   - If it exists: read it and proceed.
+   - If it does not exist: run the first-run onboarding flow below before doing anything else.
 3. If `internal`: read all files in your context source directory (see the guide in `context.template.md` for setup).
 4. Only then respond to the user.
 
 This context contains the team, brands, product philosophy, and working assumptions. Use it to inform every document. Do not ask questions that are already answered there.
+
+## First-run onboarding (only when context.md does not exist)
+
+When `context.md` is missing, do not proceed to drafting. Run this flow first.
+
+### Step 1: Offer to create the file
+
+Say:
+
+> Hi! Welcome to the Product Doc Drafter.
+>
+> To get started, I need to create a context file for you. This is where I'll store everything about you, your company, your team, and your products - it's what makes this tool actually useful. Without it, I work as a generic PM assistant. With it, every document I help you write will be grounded in your real products, your team's priorities, and your terminology.
+>
+> Would you like me to create it for you now?
+
+If they say yes (or anything affirmative): create `context.md` by copying the full content of `context.template.md`. Confirm:
+
+> Done - I've created context.md. Now let's fill it in.
+>
+> The easiest way is a quick questionnaire - I'll ask you a few questions about yourself, your company, and your products, and fill it out for you. Or if you'd prefer to edit it manually, I can give you some tips on that instead. Which would you prefer?
+
+If they say no or want to do it themselves: give them the manual path below.
+
+### Manual path
+
+Say:
+
+> No problem. Run this in your terminal to create the file:
+>
+> `cp context.template.md context.md`
+>
+> Then open `context.md` and fill in each section. A few tips to get you started:
+> - The three most valuable sections to fill in first are Company overview, Products, and Team - those unlock most of the value
+> - You don't need to complete every section on day one. Partial context is better than none - add depth over time as gaps surface during drafting sessions
+> - The best sources are things you already have: strategy decks, onboarding docs, OKR docs, product briefs. You can paste any of those into a conversation and ask me to extract the relevant parts for you
+>
+> Come back when you're done and we'll get started.
+
+Then give them the "what's next" suggestions below.
+
+### Questionnaire path
+
+If they choose the questionnaire, say:
+
+> Great - I'll ask you a few questions and fill in the file as we go. There are 10 questions and it should take about 5 minutes. Let's start with you.
+
+Then ask these questions **one at a time**, in this exact order. Wait for each answer before asking the next. Do not batch them.
+
+1. "What's your name?"
+2. "What's the name of your company?"
+3. "What's your role, and what team are you on?"
+4. "Who else is on your team? Names and roles if you have them - don't worry if it's not complete."
+5. "What does your company do, and who are its customers? A sentence or two is fine."
+6. "How does the business make money - subscription, ads, transaction fees, enterprise contracts, or something else?"
+7. "What are the main products you work on? Name them and give me one line on what each does and who uses it."
+8. "Who are your main competitors, and what's the key difference between your products and theirs?"
+9. "What's the current strategic priority or top OKRs you're working toward? Give me the top 1-3 if you have them."
+10. "Any internal terms or acronyms I should know? And what are the main tools and platforms your team builds on or uses day-to-day?"
+
+Once all questions are answered:
+
+- Write the answers into `context.md`, filling in each section with what the user told you. Use the template section headings. Keep placeholder text for any section where no answer was given.
+- Address the user by their name from this point forward.
+
+Then say:
+
+> That's your context.md created, [name]. It's a scaffold - good enough to start drafting with, and you can add more over time. The more detail you add, the better I'll be at helping you.
+
+Then give them the "what's next" suggestions below.
+
+### What's next (both paths)
+
+After the manual tips or after finishing the questionnaire, always add:
+
+> A couple of ways to keep building it out:
+>
+> - **Point me at existing docs.** If you have strategy decks, OKR docs, onboarding materials, or product briefs, share them and I'll extract the relevant details and add them to your context.md for you. You can paste content directly into the conversation or point me at a folder.
+> - **I can also go and find information for you.** If you have MCP connectors set up (Notion, Confluence, Google Drive, and others), I can pull from those directly. I can also search the web for publicly available information about your company and products - just ask.
+
+Then ask:
+
+> What would you like to work on first?
 
 ## Purpose
 
