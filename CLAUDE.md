@@ -267,6 +267,14 @@ General writing rules (American English, no em dashes, no jargon, subheading for
 
 Additional drafter-specific rules:
 - Do not adopt the language of source documents. Briefs, decks, and marketing materials often use inflated language. Extract the substance; rewrite in plain language.
+- **Lead with the problem, not the solution.** Problem statements come before proposed solutions. Describe problems in terms of user or business impact, not missing features.
+- **Use "if / then" framing for opportunities.** "If we can [do X] we will [achieve Y]." This keeps the link between action and outcome explicit.
+- **State hypotheses directly.** Not "we believe this may improve engagement" but "a regional content module to drive CTR and engagement." Direct and falsifiable.
+- **Name tradeoffs plainly.** Don't soften them. "This will likely delay X" not "there may be some impact on X."
+- **State data precisely, with baselines.** Exact figures paired with a comparator or baseline. Never vague directional language when numbers are available.
+- **Include napkin math inline.** Back-of-envelope calculations belong in the document, not deferred to a separate analysis. Show the order of magnitude even when precision isn't available.
+- **Surface open questions in the document.** Don't resolve everything before writing. Embed questions where they belong so they can be answered collaboratively.
+- **The realist observation follows the idealist one.** Present the ideal first, then the practical reality. The honest observation lands last.
 
 ## Stakeholder Questions
 
