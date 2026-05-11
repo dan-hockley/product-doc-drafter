@@ -165,13 +165,14 @@ At the start of each session: if the PM names a template, use it. If they descri
 3. Read all source docs before doing anything else.
 4. **Check for existing project folder**: Before creating any new folder, check `projects/` for an existing folder that matches the initiative. Ask the PM to confirm whether to use an existing folder or create a new one.
 5. **Create working notes file immediately**: For any new idea or session without an existing working notes file, create `working-notes.md` in the project folder and continuously update it with all context, questions, red flags, and decisions from the session. This ensures no context is lost if the session ends unexpectedly.
-6. Ask clarifying questions — inline challenges and suggestions as you go.
-7. When Q&A has covered enough ground for a section, propose drafting it: "I think we have enough to draft the problem statement. Should I add it to the doc?"
-8. On approval, create the folder and file (see File Structure below) and write the section.
-9. Continue Q&A for the next section. Repeat the checkpoint-and-write cycle for each section.
-10. As later sections develop, check whether earlier sections still hold. If new information changes the problem, goals, or scope, propose updates to earlier sections before continuing.
-11. If a proposed solution does not address the stated problem (or vice versa), flag the misalignment and resolve it before proceeding.
-12. After the final section is written, ask: "Would you like me to ask the product critic to review the doc?"
+6. **Create sources file immediately**: Create `sources.md` in the project folder and continuously update it as you read source documents — both local files and external docs accessed via MCP (Glean, Notion, Google Drive, Confluence, web fetches, etc.). See the Sources tracking section below for format and rules.
+7. Ask clarifying questions — inline challenges and suggestions as you go.
+8. When Q&A has covered enough ground for a section, propose drafting it: "I think we have enough to draft the problem statement. Should I add it to the doc?"
+9. On approval, create the folder and file (see File Structure below) and write the section.
+10. Continue Q&A for the next section. Repeat the checkpoint-and-write cycle for each section.
+11. As later sections develop, check whether earlier sections still hold. If new information changes the problem, goals, or scope, propose updates to earlier sections before continuing.
+12. If a proposed solution does not address the stated problem (or vice versa), flag the misalignment and resolve it before proceeding.
+13. After the final section is written, ask: "Would you like me to ask the product critic to review the doc?"
 
 ### Progressive drafting (default)
 
@@ -213,6 +214,7 @@ Each initiative gets its own subfolder inside `projects/`:
 projects/
   [initiative-slug]/
     working-notes.md                  ← session context, questions, decisions (created first)
+    sources.md                        ← index of all sources read during sessions (created alongside working-notes)
     [initiative-slug]-1pager.md
     [initiative-slug]-prd.md          ← added when ready
     competitive-analysis.md           ← added when competitive analyst runs
@@ -226,6 +228,7 @@ Example:
 projects/
   homepage-redesign/
     working-notes.md
+    sources.md
     homepage-redesign-1pager.md
     competitive-analysis.md
     source-docs/
@@ -237,6 +240,55 @@ projects/
 Use lowercase-hyphenated slugs for folder and file names.
 
 **Before creating a new project folder**: Always check the existing folder structure in `projects/` first. If an appropriate existing folder exists, confirm with the PM whether to use it. If no existing folder is appropriate, confirm with the PM about creating a new folder and the proposed folder name.
+
+## Sources tracking
+
+Every project folder must contain a `sources.md` file that indexes every document read during sessions for that initiative — both local files and external docs accessed via MCP connectors (Glean, Notion, Google Drive, Confluence, Atlassian/Jira, web fetches, etc.).
+
+### When to log a source
+
+Log a source the moment you read it with intent — i.e. you fetched the full document or page to inform the draft, the Q&A, or your understanding of the problem.
+
+Do not log:
+- Search result previews you didn't open
+- Files you listed but didn't read
+- Tool calls that returned metadata only
+- Internal repo files (CLAUDE.md, templates, context.md, working-notes.md)
+
+### Update rule
+
+Update `sources.md` immediately on every qualifying access, in the same pattern as `working-notes.md`. No confirmation needed. If `sources.md` doesn't exist yet for the project, create it before logging the first source.
+
+### Format
+
+Group entries by source system. Use these headings, omitting any that have no entries:
+
+```markdown
+# Sources
+
+## Local files
+- **[Title or filename]** - `path/to/file` - YYYY-MM-DD - One-line summary of what it contained or why it was useful.
+
+## Glean
+- **[Doc title]** - [URL] - YYYY-MM-DD - One-line summary.
+
+## Notion
+- **[Page title]** - [URL] - YYYY-MM-DD - One-line summary.
+
+## Google Drive
+- **[Doc title]** - [URL] - YYYY-MM-DD - One-line summary.
+
+## Confluence
+- **[Page title]** - [URL] - YYYY-MM-DD - One-line summary.
+
+## Jira
+- **[Issue key and title]** - [URL] - YYYY-MM-DD - One-line summary.
+
+## Web
+- **[Page title]** - [URL] - YYYY-MM-DD - One-line summary.
+```
+
+If a source is read more than once across sessions, leave a single entry and update the date if relevant. Don't duplicate.
 
 ## Do's and don'ts
 

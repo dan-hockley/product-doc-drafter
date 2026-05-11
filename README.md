@@ -93,6 +93,8 @@ Each initiative gets its own subfolder inside `projects/`:
 ```
 projects/
   [initiative-slug]/
+    working-notes.md
+    sources.md
     [initiative-slug]-1pager.md
     [initiative-slug]-prd.md
     competitive-analysis.md
@@ -100,6 +102,8 @@ projects/
     prototype/
       index.html
 ```
+
+`working-notes.md` captures session context, questions, red flags, and decisions. `sources.md` is an index of every document read during sessions for this initiative — local files and external docs accessed via MCP connectors (Glean, Notion, Google Drive, Confluence, Jira, web fetches), grouped by source system.
 
 ## Docx export
 
